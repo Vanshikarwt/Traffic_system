@@ -128,7 +128,7 @@ export default function CommandCenter() {
     }
 
     try {
-      const res = await fetch("http://localhost:8000/api/v1/auth/login", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/v1/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -203,7 +203,7 @@ export default function CommandCenter() {
     setError(null);
     try {
       // Attempting to query the FastAPI backend health-check route
-      const res = await fetch("http://localhost:8000/api/v1/health");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/v1/health`);
       if (!res.ok) {
         throw new Error(`Gateway response status: ${res.status}`);
       }
@@ -221,7 +221,7 @@ export default function CommandCenter() {
 
   const fetchNetworkTelemetry = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v1/network/grid-telemetry");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/v1/network/grid-telemetry`);
       if (!res.ok) {
         throw new Error(`Telemetry status: ${res.status}`);
       }
@@ -431,7 +431,7 @@ export default function CommandCenter() {
               <div className="grid grid-cols-2 gap-3 text-xs font-mono">
                 <div className="bg-slate-950/60 border border-slate-800/80 p-3 rounded-lg flex flex-col gap-1">
                   <span className="text-slate-500">BACKEND_URL</span>
-                  <span className="text-slate-300 truncate font-semibold">http://localhost:8000</span>
+                  <span className="text-slate-300 truncate font-semibold">{process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}</span>
                 </div>
                 <div className="bg-slate-950/60 border border-slate-800/80 p-3 rounded-lg flex flex-col gap-1">
                   <span className="text-slate-500">API_ENDPOINT</span>

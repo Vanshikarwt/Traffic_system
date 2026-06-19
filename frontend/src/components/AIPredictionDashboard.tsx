@@ -28,7 +28,7 @@ export default function AIPredictionDashboard() {
   const fetchForecast = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/api/v1/analytics/forecast/1");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/v1/analytics/forecast/1`);
       if (!res.ok) {
         throw new Error(`Analytics server responded with status: ${res.status}`);
       }

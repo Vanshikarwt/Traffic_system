@@ -47,7 +47,7 @@ export default function SignalControlCenter() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("http://localhost:8000/api/v1/intersections/1/signal-state");
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/v1/intersections/1/signal-state`);
       if (!res.ok) {
         throw new Error(`Failed to query signal intelligence: ${res.status}`);
       }

@@ -101,7 +101,7 @@ export default function VideoUploadModal({ onClose, onSuccess, token }: VideoUpl
       }
 
       const response = await fetch(
-        `http://localhost:8000/api/v1/intersections/${selectedIntersectionId}/process`,
+        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/v1/intersections/${selectedIntersectionId}/process`,
         {
           method: "POST",
           headers,

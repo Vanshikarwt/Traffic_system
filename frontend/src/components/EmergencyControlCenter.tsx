@@ -54,7 +54,7 @@ export default function EmergencyControlCenter({
       }
 
       const res = await fetch(
-        `http://localhost:8000/api/v1/network/green-corridor?start=${startNode}&end=${endNode}`,
+        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/v1/network/green-corridor?start=${startNode}&end=${endNode}`,
         {
           headers,
         }
