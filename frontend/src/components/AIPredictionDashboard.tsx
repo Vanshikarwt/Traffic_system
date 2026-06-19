@@ -123,7 +123,7 @@ export default function AIPredictionDashboard() {
               AI Traffic Forecasting Engine
             </h3>
             <p className="text-[10px] text-slate-500 font-mono mt-0.5">
-              INTERSECTION A (BROADWAY) // 60-MIN HISTORICAL & 30-MIN PREDICTIONS
+              INTERSECTION A (BROADWAY) {"//"} 60-MIN HISTORICAL & 30-MIN PREDICTIONS
             </p>
           </div>
           

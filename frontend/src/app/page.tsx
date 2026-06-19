@@ -766,7 +766,7 @@ export default function CommandCenter() {
       <footer className="relative z-10 border-t border-slate-800 bg-[#060b14] px-6 py-3 flex flex-col sm:flex-row justify-between items-center text-[10px] font-mono text-slate-500 gap-2">
         <div className="flex items-center gap-2">
           <Activity className="w-3.5 h-3.5 text-emerald-500 animate-pulse" />
-          <span>SYS_STATUS: CALIBRATED // ACTIVE METRICS STREAMING</span>
+          <span>SYS_STATUS: CALIBRATED {"//"} ACTIVE METRICS STREAMING</span>
         </div>
         <div className="flex items-center gap-4">
           <span>HOST: LOCALSOCKET_HUD</span>

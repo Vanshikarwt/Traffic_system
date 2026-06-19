@@ -115,7 +115,7 @@ export default function SignalControlCenter() {
             <Radio className="w-4 h-4 text-emerald-400 animate-pulse" /> Adaptive Signal HUD
           </h2>
           <p className="text-[10px] text-slate-500 font-mono mt-0.5">
-            {intersectionName.toUpperCase()} // ACTIVE CYCLE
+            {intersectionName.toUpperCase()} {"// ACTIVE CYCLE"}
           </p>
         </div>
         <button
@@ -268,7 +268,7 @@ function LaneLightWidget({ direction, data, lightState }: WidgetProps) {
       <div className="flex flex-col items-center text-center font-mono select-none">
         <span className="text-[8px] font-bold text-slate-400 leading-none">{direction}</span>
         <span className="text-[7px] text-slate-500 mt-1">Score: {data?.priority_score || 0}</span>
-        <span className="text-[6px] text-slate-600">D: {data?.density || 0}% // V: {data?.vehicle_count || 0}</span>
+        <span className="text-[6px] text-slate-600">D: {data?.density || 0}% {"//"} V: {data?.vehicle_count || 0}</span>
       </div>
     </div>
   );

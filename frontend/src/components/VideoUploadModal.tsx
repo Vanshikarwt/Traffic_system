@@ -171,7 +171,7 @@ export default function VideoUploadModal({ onClose, onSuccess, token }: VideoUpl
                 AI ENGINE ANALYZING FRAMES...
               </span>
               <span className="text-[10px] text-slate-500">
-                DETECTING VEHICLES // CALCULATING LANE DENSITY INDEX
+                DETECTING VEHICLES {"//"} CALCULATING LANE DENSITY INDEX
               </span>
             </div>
           </div>
@@ -233,7 +233,7 @@ export default function VideoUploadModal({ onClose, onSuccess, token }: VideoUpl
                         {file.name}
                       </span>
                       <span className="text-[10px] text-slate-500">
-                        {(file.size / (1024 * 1024)).toFixed(2)} MB // CLICK TO CHANGE
+                        {(file.size / (1024 * 1024)).toFixed(2)} MB {"//"} CLICK TO CHANGE
                       </span>
                     </div>
                   ) : (
@@ -245,7 +245,7 @@ export default function VideoUploadModal({ onClose, onSuccess, token }: VideoUpl
                         Drag and drop your traffic video feed here
                       </span>
                       <span className="text-[10px] text-slate-500 uppercase">
-                        Accepts .mp4 or .avi formats // Max size 100MB
+                        Accepts .mp4 or .avi formats {"//"} Max size 100MB
                       </span>
                     </div>
                   )}
